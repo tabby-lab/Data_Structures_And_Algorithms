@@ -8,20 +8,45 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
+
+//w splice func
 function chunk(array, size) {
     const chunked = [];
+    let index = 0;
 
-    for (let element of array) {
-        const last = chunked[chunked.length - 1 ];
-//if last element doesnt exist or if its length is equal to chunk size
-        if (!last || last.length === size) {
-            chunked.push([element]);
-            //else add the current elemrnt into the chunk
-        } else {
-            last.push(element);
-        }
+    while (index< array.length) {
+        chunked.push(array.slice(index, index + size));
+        index += size;
     }
     return chunked;
 }
 
 module.exports = chunk;
+
+
+
+
+
+
+
+
+
+
+
+// function chunk(array, size) {
+//     const chunked = [];
+
+//     for (let element of array) {
+//         const last = chunked[chunked.length - 1 ];
+// //if last element doesnt exist or if its length is equal to chunk size
+//         if (!last || last.length === size) {
+//             chunked.push([element]);
+//             //else add the current elemrnt into the chunk
+//         } else {
+//             last.push(element);
+//         }
+//     }
+//     return chunked;
+// }
+
+// module.exports = chunk;
