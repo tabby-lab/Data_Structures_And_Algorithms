@@ -9,16 +9,37 @@
 
 
 
-
-
 function reverse(str) {
-    return str
-    .split('')
+   return str
+   .split('')
     .reverse()
     .join('');
-    }
+
+}
+
+
+module.exports = reverse;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function reverse(str) {
+//     return str
+//     .split('')
+//     .reverse()
+//     .join('');
+//     }
     
-    module.exports = reverse;
+//     module.exports = reverse;
 
 
 
