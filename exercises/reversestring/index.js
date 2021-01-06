@@ -7,18 +7,28 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 
-
+//convert string to array
+//call reverse
+//join array back into a string
+//return back
 
 function reverse(str) {
-   return str
-   .split('')
-    .reverse()
-    .join('');
-
+    const arr = str.split('');
+    arr.reverse();
+    return arr.join('');
 }
 
 
 module.exports = reverse;
+
+//or 
+
+// function reverse(str) {
+//    return str.split('').reverse().join('')
+// }
+
+
+// module.exports = reverse;
 
 
 
